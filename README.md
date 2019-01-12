@@ -16,3 +16,12 @@
         Patterns: MVC
 #### Python - Hello Worlds
         Technologien: Python Skripte
+
+# Übersicht non-Public Inhalte
+#### JBoss Kurs: Chat Anwendung 
+        Technologien: JNDI, EJB, Hibernate, JDBC, JSP
+#### Java Kurs Heide: Schiffe versenken in Versionen von mir und Marcel
+        Technologien: Java, GUI: AWT / SWT / SWING, Serialisierung - speichern und laden 
+        Patterns: Factory, MVC      
+#### JEE Kurs: Rechner, Chat u.v.m.
+        Technologien: Servlet, JSP, JNDI, SQL 
