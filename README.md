@@ -1,4 +1,4 @@
-# Übersicht
+# ï¿½bersicht
 
 #### Datenbankprogrammierung 
         Technologien: Java, SQL, JDBC
@@ -9,7 +9,7 @@
         Technologien: Java, GUI: AWT / SWT / SWING, Serialisierung - speichern und laden 
         Patterns: Factory, MVC
 #### Projektarbeit Dokument-Vergleich
-        Technologien: Java, JBoss, JSP, HTML5, JQuery Mobile, Servlet, dynamisch geschrieben und ausgeführte Batch-Datei, DocBridge Delta
+        Technologien: Java, JBoss, JSP, HTML5, JQuery Mobile, Servlet, dynamisch geschrieben und ausgefï¿½hrte Batch-Datei, DocBridge Delta
         Patterns: MVC
 #### Webtech
         Technologien: PHP, SQL, Bootstrap, JS, JSON, AJAX, CSS, HTML5, JQuery
