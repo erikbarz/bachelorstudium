@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+C:\Users\Erik\Studium\2. Semester\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1158146584.index
+\Fallstudie
+C:\Users\Erik\Studium\2. Semester\Java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2998695789.index
+\Fallstudie

@@ -1,0 +1,114 @@
+private void doit(HttpServletRequest request, HttpServletResponse response) throws Serv-letException, IOException, InterruptedException {  
+	String stage = (String) request.getParameter("select-stage");    
+	String[] testlaufStringListe=request.getParameterValues("checkbox");    
+	StringBuilder testlaufStringBuilder = new StringBuilder();  
+	List<Testlauf> testlaufListe = new ArrayList<Testlauf>();  
+	
+	//falls Testläufe gewählt wurden  
+	if(testlaufStringListe!=null && testlaufStringListe.length>0){   
+		
+		//Schritt1: Vorbereitungen   
+		for(String testlaufString : testlaufStringListe){    
+			//Testläufe inklusive neuer Ordner für Candidates anlegen    
+			Testlauf testlauf=new Testlauf(Integer.parseInt(testlaufString), stage);    
+			testlaufListe.add(testlauf);     
+			//String mit Testlaufnamen schreiben    
+			testlaufStringBuilder.append(testlauf.getName());    
+			if(testlaufStringListe[testlaufStringListe.length-1]!=testlaufString){     
+				testlaufStringBuilder.append(", ");    
+			}   
+		}   
+		
+		
+		//Schritt2: HostReceiver starten   
+		//ParameterArray für den Start des Receivers zusammenbauen   
+		String[] receiverParameter=new String[2];   
+		receiverParameter[0]="-c";   
+		receiverParameter[1]=configHelper.getConfigPath() + "dbcoop.props."        + stage;   
+		final String[] RECEIVERPARAMS=receiverParameter;   
+		Thread receiverThread = new Thread(){    
+			@Override    
+			public void run(){     
+				JDbcpSrv.main(RECEIVERPARAMS);    
+			}   
+		};
+		//neuen Thread mit Receiver starten   
+		receiverThread.start();      
+		//String mit Parametern zusammenbauen   
+		String receiverParameterString ="";      
+		for(String recParameter : receiverParameter){    
+			receiverParameterString=receiverParameterString+recParameter+" ";   
+		}   
+		
+		
+		//Schritt3: HostSimulator starten   
+		List<String> simulatorParameter = new ArrayList<String>();   
+		//Parameter für den Start des Simulators zusammenbauen   
+		String simulatorParameterString="";   
+		for(Testlauf testlauf:testlaufListe){    
+			simulatorParameter=getSimulatorParameter(testlauf);    
+			for(String simParameter : simulatorParameter){     
+				simulatorParameterString =  simulatorParameterString+simParameter+" ";    
+			}     
+			HostSimulator.main(simulatorParameter.toArray(new String[simulatorParameter.size()]));   
+		}   
+		
+		
+		//Schritt4: Dokumentenvergleich starten     
+		//variablen anlegen für Qualitätskriterien    
+		int ohneAbweichungen=0;    
+		int mitAbweichungen=0;    
+		int kritischerFehler=0;    
+		int FehlerImRegTestSelbst =0;    
+		int gesamt=0;    
+		//falls alle Doks gesendet, aber noch nicht alle zurückgekommen    
+		Thread.sleep(20000);        
+		for(Testlauf testlauf: testlaufListe){     
+			for (Testfall testfall : testlauf.getTestfaelle()){      
+				if(new File(testfall.getCandidateFilePath()).exists()  && new File(testfall.getReferenceFilePath()).exists()){       
+					testfall.setErgebnis(new Ergebnis( new ComparisonProcess(testfall).run(true)));       
+					switch(testfall.getErgebnis().getRc()){        
+						case 0: ohneAbweichungen++;  
+								break;        
+						case 1: mitAbweichungen++;  
+								break;        
+						case -2: FehlerImRegTestSelbst++; 
+								break; 
+						case -1: FehlerImRegTestSelbst++;   
+								break;        
+						case -999: FehlerImRegTestSelbst++;          
+								break;        
+					} 
+				}else{        
+					kritischerFehler++;       
+				}       
+			}     
+		}    
+		
+		
+		//Schritt5: Auswertungen erstellen        
+		ErgebnisSeite ergebnisSeite = new ErgebnisSeite();    
+		ergebnisSeite.setTestlaufListe(testlaufListe);    
+		ergebnisSeite.setAbw(mitAbweichungen);    
+		ergebnisSeite.setOk(ohneAbweichungen);    
+		ergebnisSeite.setKrit(kritischerFehler);    
+		ergebnisSeite.setGes(gesamt);       
+		
+		
+		//Schritt6: infos in den request schreiben       
+		request.setAttribute("ergebnisSeite", ergebnisSeite);    
+		//Request an Zielseite weiterleiten    
+		RequestDispatcher dispatcher = null;    
+		dispatcher = request. getRequestDispatcher ("dokVergleichAuswertung.jsp");             
+		dispatcher.forward(request, response);       
+		//falls keine testläufe gewählt wurden, zu letzter seite zurück  
+		// und fehlernachricht ausgeben   
+	
+	}else{    
+		request.setAttribute("checkBoxEingabeFehler", "<font color='red'> Bitte w&auml;hlen Sie mindestens einen Testlauf</font>");    
+		//Request an Zielseite weiterleiten    
+		RequestDispatcher dispatcher = null;            
+		dispatcher = request.getRequestDispatcher("startDokVergleich.jsp");                
+		dispatcher.forward(request, response);    
+	}       
+} 

@@ -1,0 +1,18 @@
+# die zu prüfende zahl
+zahl=1
+# bisherige summe
+summe=0
+
+# schleife, die über die zahlen 1 bis 50 geht
+while zahl <=50:
+	# prüfung: ist zahl ungerade
+	# modulu heißt rest
+	if zahl % 2 == 1:
+		# wenn ungerade, aufsummieren
+		summe = summe + zahl
+	# nächste zahl
+	zahl = zahl + 1
+
+# summe ausgeben
+else:
+	print summe	

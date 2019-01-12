@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BinaryTree.java&apos; to &apos;AlgorithmenDatenstrukturen/src/kapitel3&apos;&#x0D;&#x0A;- Original project: &apos;AlgorithmenDatenstrukturen&apos;&#x0D;&#x0A;- Destination element: &apos;AlgorithmenDatenstrukturen/src/kapitel3&apos;&#x0D;&#x0A;- Original element: &apos;kapitel3.BinaryTree.java&apos;" description="Copy compilation unit" destination="/src&lt;kapitel3" element1="/src&lt;kapitel3{BinaryTree.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1305194054482" units="1" version="1.0"/>
+</session>

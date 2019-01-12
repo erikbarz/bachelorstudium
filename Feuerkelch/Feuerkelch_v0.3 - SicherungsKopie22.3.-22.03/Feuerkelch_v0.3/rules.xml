@@ -1,0 +1,46 @@
+<xml>
+	<rule>
+		<nr>7</nr>
+		<text>Dein linker Nachbar muss trinken!</text>
+	</rule>
+
+	<rule>
+		<nr>8</nr>
+		<text>Dein rechter Nachbar muss trinken!</text>
+	</rule>
+
+	<rule>
+		<nr>9</nr>
+		<text>Suche dir einen Mitspieler aus, der trinken muss!</text>
+	</rule>
+
+	<rule>
+		<nr>10</nr>
+		<text>Schluck du Luder!</text>
+	</rule>
+
+	<rule>
+		<nr>11</nr>
+    <text>Stelle eine beliebige Regel auf. Die Regel gilt bis zum Ende des Spiels. Wer dagegen verstößt, muss trinken! (z.B. "Es darf nur mit der linken Hand getrunken werden" )</text>
+	</rule>
+	
+	<rule>
+		<nr>12</nr>
+		<text>Du bist nun Questionmaster! Wer dir eine Frage beantwortet, muss seine Antwort mit "Mister Questionmaster" beginnen, sonst muss er trinken.</text>
+	</rule>
+
+	<rule>
+		<nr>13</nr>
+		<text>Fülle ein beliebiges Getränk in den Krug in der Mitte!</text>
+	</rule>
+
+	<rule>
+		<nr>13-2</nr>
+		<text>Trink den Feuerkelch!</text>
+	</rule>
+
+	<rule>
+		<nr>14</nr>
+		<text>Wasserfall! Alle müssen trinken. Niemand darf aufhören zu trinken, bevor sein linker Nachbar aufgehört hat. Du darfst als erster absetzen.</text>
+	</rule>
+</xml>

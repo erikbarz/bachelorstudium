@@ -1,0 +1,10 @@
+Computer1(schwer)°Computer2(schwer)°26°1309355417057
+Computer1(schwer)°Computer2(schwer)°28°1309355421416
+Computer2(schwer)°Computer1(schwer)°30°1309355405964
+Computer1(schwer)°Computer2(schwer)°32°1309799741982
+Computer2(schwer)°Computer1(schwer)°42°1309421405823
+Computer1(schwer)°Computer2(schwer)°45°1309355412182
+Computer2(schwer)°Computer1(schwer)°47°1309436720320
+Computer1(schwer)°Computer2(leicht)°49°1309355463165
+Computer2(schwer)°Computer1(schwer)°54°1312024544188
+Computer2(schwer)°Computer1(schwer)°57°1309507863667

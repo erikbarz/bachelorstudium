@@ -1,0 +1,40 @@
+!SESSION 2011-10-18 15:05:53.114 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2011-10-18 15:11:13.162
+!MESSAGE Module Fallstudie published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2011-10-18 15:11:25.863
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2011-10-18 15:12:12.820
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2011-10-18 15:15:42.617
+!MESSAGE 1 files modified in module Fallstudie
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2011-10-18 15:19:56.593
+!MESSAGE 2 files modified in module Fallstudie
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 1107820544 2011-10-18 15:22:11.345
+!MESSAGE No publisher found for module DeletedModule[Fallstudie,org.eclipse.jst.jee.server:Fallstudie]
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2011-10-18 15:24:05.950
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2011-10-18 15:24:26.512
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2011-10-18 15:24:26.693
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2011-10-18 15:25:00.566
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2011-10-18 15:25:58.694
+!MESSAGE Server processes have been terminated.

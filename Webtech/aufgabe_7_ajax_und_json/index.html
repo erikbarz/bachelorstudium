@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Ajax und JSON</title>
+   <link rel="stylesheet" href="bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <div class="container">
+      <div class="panel panel-default">
+
+         <div class="panel-heading">
+            <h3 class="panel-title">Neuen Artikel eintragen</h3>
+         </div>
+
+         <div class="panel-body">
+
+            <form class="products-form" role="form" action="" method="POST">
+				<!-- IDs für alle Felder hinterlegt-->
+               <input class="form-control" type="text" name="name" placeholder="Produktname" id="inputName" >
+               <input class="form-control" type="url" name="url" placeholder="Artikel-URL" id="inputUrl" >
+               <input class="form-control" type="url" name="image" placeholder="Artikel-Bild" id="inputImage" >
+               <div class="row">
+                  <div class="col-xs-6 input-group">
+                     <input type="number" class="form-control" name="price" placeholder="Preis" id="inputPrice" >
+                     <span class="input-group-addon">€</span>
+                  </div>
+                  <div class="col-xs-6">
+				  <!-- onClick Events auf Buttons gelegt, aus den Buttons Links gemacht, dass nicht sofort neu laden startet -->
+                     <a class="btn btn-primary btn-block btn-create" onClick="app.form.createNewProduct()">Anlegen</a>
+                     <a class="btn btn-primary btn-block btn-update" onClick="app.form.updateProduct()">Aktualisieren</a>
+                  </div>
+               </div>
+               <input type="hidden" name="id" id="inputId" >
+            </form>
+
+         </div>
+         <!-- /.panel-body -->
+      </div>
+      <!-- /.panel -->
+
+      <div class="row list-group products-list" id="products-list">
+         <!-- Wird per Script gefüllt -->
+      </div>
+
+   </div>
+   <!-- /.container -->
+
+   
+   <!-- Template für Produkte -->
+   <template id="productTemplate">
+      <div class="item col-xs-4" id="${ID}">
+         <div class="thumbnail" data-id="${ID}">
+            <a class="templateURL" href="#">
+               <img src="#" alt="Produkt-Bild">
+            </a>
+            <div class="buttons-edit">
+               <a class="btn btn-default btn-sm btn-edit" href="#">Edit</a>
+               <a class="btn btn-default btn-sm btn-delete" href="#">Delete</a>
+            </div>
+            <div class="caption">
+               <h4><a class="templateURL" href="#"><p class="templateName">${NAME}</p></a></h4>
+               <span class="lead">${PRICE}</span>
+            </div>
+         </div>
+      </div>
+   </template>
+   <!-- /.Template für Produkte -->
+
+   <script src="jquery.js"></script>
+   <script src="script.js"></script>
+
+</body>
+
+</html>

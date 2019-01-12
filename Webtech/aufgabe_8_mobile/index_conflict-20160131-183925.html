@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de" manifest="app.appcache">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Nadia's Rechner</title>
+   <meta name="description" content="Nadias Währungsrechner">
+   
+
+   <!-- jquery importe -->
+   <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.css">   
+   <script type="text/javascript" src="jquery.mobile/jquery.js"></script>
+   <script type="text/javascript" src="jquery.mobile/jquery.mobile-1.4.5.js"></script>
+   
+   <!-- importe für Wechselkurs-Rechner-->
+   <script src="js/currencies.json.js"></script>
+   <script src="js/script.js"></script>
+   
+	<!-- Meta Tags aus https://beier.f4.htw-berlin.de/wiki/mobile-web-applications/ -->
+	<!-- Zoomen in der Anwendung verhindern. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<!-- Anwendung im Vollbildmodus anzeigen. -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- Schwarze Statusbar mit weißem Text. -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Namen der Anwendung festlegen. -->
+	<meta name="apple-mobile-web-app-title" content="Nadias Währungsrechner">
+
+	<!-- Icon der Anwendung festlegen https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html  -->
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon-iphone-precomposed.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-ipad-precomposed.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-iphone-retina-precomposed.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-ipad-retina-precomposed.png">
+
+	<!-- Startbild der Anwendung festlegen. -->
+	<link rel="apple-touch-startup-image" href="img/startup.png">
+
+	
+	<script type="text/javascript">
+			
+		<!-- Beim Klick auf den "Tauschen" Button sollen die gewählten Währungen getauscht werden-->
+		function swapCurrencies(){
+			<!-- gewählte Währungen in Zwischenvariablen ziehen-->
+			var swapFromCur = $('#fromCurrency').val();
+			var swapToCur = $('#toCurrency').val();
+			
+			<!-- Zuweisung der jeweils anderen Währung-->
+			$('#fromCurrency').val(swapToCur).change();
+			$('#toCurrency').val(swapFromCur).change();
+			
+		}
+		
+		
+		
+	</script>
+	
+</head>
+
+<body>
+
+	<!-- Start der jqery Seite siehe http://demos.jquerymobile.com/1.3.2/intro/ -->
+   <div data-role="page">
+
+		<!-- Start des Content Bereichs auf der Seite - siehe http://demos.jquerymobile.com/1.3.2/intro/ -->
+		<div data-role="content" style="text-align:center">
+			<h1>Währungsrechner</h1>
+			<form name="exchange">
+				
+				<!-- Eingabe -->
+				<label for="from-value">Bitte hier umzurechnenden Wert eingeben:</label>
+				<input name="from-value" id="fromValueInputField" type="number" step="any" width="100%" autofocus>
+				
+				<label for="options">Bitte umzurechnende währungen wählen:</label>
+				<!-- Währungen Dropdowns in horizontaler Leiste -->
+				<!--  Grid Layout analog http://demos.jquerymobile.com/1.4.0/grids-buttons/ -->
+				<div name="options" class="ui-grid-b">
+					<div class="ui-block-a">
+						 <select name="from-currency" id="fromCurrency">
+							<!-- 
+							<option value="eur">EUR</option>
+							<option value="usd">USD</option>
+							-->
+						 </select>
+					 </div>
+					 
+					 <div class="ui-block-b">
+						<a href="#" onClick=swapCurrencies() data-role="button" data-icon="recycle" data-iconpos="left" data-inline="true">Tauschen</a>
+					 </div>
+					 
+					 <div class="ui-block-c">
+						 <select name="to-currency" id="toCurrency">
+							<!--
+							<option value="usd">USD</option>
+							<option value="eur">EUR</option>
+							-->
+						 </select>
+					</div>
+				</div>
+				
+				<!-- Ergebnis -->
+				<label for="to-value">Ergebnis:</label> 
+				<input name="to-value" id="toValueInputField" step="any" width="100%" >
+
+		  </form>
+		  		  
+		</div>  <!-- /.content -->
+
+   </div> <!-- /.page -->
+
+
+			
+</body>
+
+</html>

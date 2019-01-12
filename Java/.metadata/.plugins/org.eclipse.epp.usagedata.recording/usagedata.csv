@@ -1,0 +1,23 @@
+what,kind,bundleId,bundleVersion,description,time
+java.runtime.version,sysinfo,,,"1.6.0_24-b07",1301382088315
+java.specification.name,sysinfo,,,"Java Platform API Specification",1301382088315
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1301382088315
+java.specification.version,sysinfo,,,"1.6",1301382088315
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1301382088315
+java.version,sysinfo,,,"1.6.0_24",1301382088316
+java.vm.info,sysinfo,,,"mixed mode",1301382088316
+java.vm.name,sysinfo,,,"Java HotSpot(TM) 64-Bit Server VM",1301382088316
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1301382088316
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1301382088316
+java.vm.specification.version,sysinfo,,,"1.0",1301382088316
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1301382088316
+java.vm.version,sysinfo,,,"19.1-b02",1301382088316
+started,bundle,org.eclipse.jsch.core,1.1.200.I20100505-1245,"org.eclipse.jsch.core",1301382089116
+started,bundle,org.eclipse.team.cvs.core,3.3.301.R36x_v20110119-0815,"org.eclipse.team.cvs.core",1301382089139
+started,bundle,org.eclipse.mylyn.team.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.team.ui",1301382089576
+started,bundle,org.eclipse.epp.usagedata.ui,1.3.1.R201102081640,"org.eclipse.epp.usagedata.ui",1301382089975
+started,bundle,org.eclipse.update.scheduler,3.2.300.v20100512,"org.eclipse.update.scheduler",1301382090223
+started,bundle,org.eclipse.update.configurator,3.3.100.v20100512,"org.eclipse.update.configurator",1301382092101
+started,bundle,org.eclipse.update.core,3.2.402.R36x_v20100629,"org.eclipse.update.core",1301382092454
+started,bundle,org.eclipse.team.cvs.ui,3.3.302.R36x_v20110203-1036,"org.eclipse.team.cvs.ui",1301382092733
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1301382095057

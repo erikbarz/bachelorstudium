@@ -1,0 +1,33 @@
+# liste von listen
+saetze=[["Es", "war", "kein", "Traum"]
+	#hier den rest einfügen]
+
+# anzahl der wörter
+anzword = 0
+
+# anzahl buchstaben
+anzchar = 0
+
+# anzahl der sätze
+anzsent = 0
+
+# schleife über die sätze
+for satz in saetze:
+	# anzahl der sätze + 1
+	anzsent = anzsent + 1
+	# schleife über die wörter eines satzes
+	for word in satz:
+		anzword = anzword + 1
+		anzchar = anzchar + len(word)	
+
+# anzahl der wörter ausgeben
+print "anzahl der wörter", anzword
+
+# anzahl der buchstaben
+print "anzahl der buchstaben", anzchar
+
+# durchschnitt wörter im satz
+print "durchschnitt wörter im satz", anzword / anzsent
+
+# durchschnitt buchstaben im wort
+print "durchschnitt buchstaben im wort", anzchar / anzword 

@@ -1,0 +1,262 @@
+<html>
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Nadias WIFI Connect Sheet</title>
+   
+    <!-- 
+	Styles für BIldschirm und Print
+ -->
+   <style>
+	@media print {
+	  main {
+         visibility: hidden 
+      }
+
+      h1,
+      output {
+         text-align: center;
+      }
+
+      output {
+         font-size: 50px;
+		 display: flex;
+         flex-direction: column;
+         max-width: 333px;
+         margin: 0 auto;
+      }
+	}
+	
+	@media screen {
+		main {
+         display: flex;
+         flex-direction: column;
+         max-width: 333px;
+         margin: 0 auto;
+      }
+
+      main > * {
+         display: block;
+         margin: 10px;
+      }
+
+      h1,
+      output {
+         text-align: center;
+      }
+
+      output {
+         font-size: 50px;
+		 display: flex;
+         flex-direction: column;
+         max-width: 333px;
+         margin: 0 auto;
+      }
+	}
+     
+   </style>
+   
+ <!-- 
+	Import der benötigten JavaScript Bibliotheken
+ -->
+   <script type="text/javascript" src="resources/qrcode.js">
+	</script>
+    <script type="text/javascript" src="resources/html5-qrcode.js">
+</script>
+   
+   
+<!-- 
+	Funktion zum Auslesen der Eingabefelder und generieren des Strings für den QR Code
+ -->
+   <script type="text/javascript">
+		// https://github.com/amanuel/JS-HTML5-QRCode-Generator
+		
+		function generateQRCode() {
+			
+			// Reminder: so bekommt man ein Feld: document.getElementById("input_field_ssid")
+			// Reminder: so bekommt man dessen inhalt: document.getElementById("input_field_ssid").value
+			
+			// variablen für jedes Feld erstellen und Inhalt füllen
+			var ssid = document.getElementById("input_field_ssid").value;
+			var password = document.getElementById("input_field_password").value;
+			var encryption = document.getElementById("select_encryption").value;
+			var hidden = document.getElementById("checkbox_hidden").checked;
+			
+			// if Abfrage auf die Felder SSID und Passwort. Nur durchlaufen, wenn beide Felder gefüllt sind
+			if (ssid!="" && password!="")
+			{
+				//möglicher TExt soll so aussehen:
+				//WIFI:S:<SSID>;T:<WEP | WPA>;P:<PASSWORD>;H:<HIDDEN ? true : false>;;
+				
+				//SSID anhängen
+				var qrCodeInputText = "WIFI:S:";				
+				qrCodeInputText = qrCodeInputText + ssid;
+				
+				//Verschlüsselung anhängen
+				qrCodeInputText = qrCodeInputText + ";T:";
+				qrCodeInputText = qrCodeInputText + encryption;				
+				
+				//Passwort anhängen
+				qrCodeInputText = qrCodeInputText + ";P:";
+				qrCodeInputText = qrCodeInputText + password;
+				
+				//hidden flag anhängen --> if/else abfrage implementieren
+				if (hidden==true) {
+					qrCodeInputText = qrCodeInputText + ";H:true";
+				}
+				qrCodeInputText = qrCodeInputText + ";;";
+				
+				//Datenblatt ausgeben
+				document.getElementById("output_field_ssid").value=ssid;
+				document.getElementById("output_field_password").value=password;
+				document.getElementById("output_field_encryption").value=encryption;
+				
+				// zu debug zwecken als TExt ausgeben
+				//document.getElementById("debug").value=qrCodeInputText;
+				
+				//Anpassung auf der Oberfläche mit dem neu generierten String
+				updateQRCode(qrCodeInputText);
+			}
+		}
+		
+		
+	<!-- JS Funktion aus Beispiel zum Einfügen des QR Codes -->		
+		function updateQRCode(text) {
+
+			var element = document.getElementById("qrcode");
+
+			var bodyElement = document.body;
+			if(element.lastChild)
+			  element.replaceChild(showQRCode(text), element.lastChild);
+			else
+			  element.appendChild(showQRCode(text));
+      }	 
+	</script>
+   
+   
+   <!-- JS Funktion für print -->
+    <script type="text/javascript">
+       //http://www.w3schools.com/jsref/met_win_print.asp
+	   
+	   function printNetwork() {
+			window.print();
+			saveNetwork();
+      }
+    </script>
+	
+	
+	<!-- JS Funktionen zum Speichern und Laden -->
+    <script type="text/javascript">
+      //http://www.w3schools.com/html/html5_webstorage.asp
+	  
+	  function saveNetwork() {
+	  // Fallunterscheidung: unterstützt der Browser HTML5?
+		if(typeof(Storage) !== "undefined") {
+			// Code for localStorage/sessionStorage.
+			
+			// variablen für jedes Feld erstellen und Inhalt füllen
+			var ssid = document.getElementById("input_field_ssid").value;
+			var encryption = document.getElementById("select_encryption").value;
+			var hidden = document.getElementById("checkbox_hidden").checked;
+			
+			// Store --> in den Local Storage speichern
+			localStorage.setItem("ssid", ssid);
+			localStorage.setItem("encryption", encryption);
+			localStorage.setItem("hidden", hidden);
+			
+		} else {
+			// Sorry! No Web Storage support..
+		}
+      }	  
+	  
+	  //http://www.w3schools.com/tags/ev_onload.asp
+	  function loadNetwork() {
+		// Fallunterscheidung: unterstützt der Browser HTML5?
+		if(typeof(Storage) !== "undefined") {
+			// Code for localStorage/sessionStorage.			
+			
+			// Retrieve --> aus dem local Storage in lokale Variablen laden
+			var ssid = localStorage.getItem("ssid");
+			var encryption = localStorage.getItem("encryption");
+			var hidden = localStorage.getItem("hidden");
+			
+			// Anzeige ändern auf Wert der lokalen Variablen
+			document.getElementById("input_field_ssid").value = ssid;
+			document.getElementById("select_encryption").value = encryption;
+			document.getElementById("checkbox_hidden").checked = hidden;
+		} else {
+			// Sorry! No Web Storage support..
+		}
+      }
+	  
+    </script>
+   
+</head>
+
+<body onload="loadNetwork()">
+	<main>
+		<h1>WIFI Connect Sheet</h1>
+		<hr><br>
+		
+		<table border=0>
+			<tr>
+				<td>SSID</td>
+				<td><input type="text" id="input_field_ssid" placeholder="CompuGlobalHyperMegaNet" onInput=generateQRCode()></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" id="input_field_password" placeholder="Its a Tramamapoline!" onInput=generateQRCode()></td>
+			</tr>
+			<tr>
+				<td>Encryption</td>
+				<td>
+					<select id="select_encryption" onInput=generateQRCode()>
+						<option value="WEP">WEP</option>
+						<option value="WPA">WPA</option>
+						<option value="WPA2">WPA2</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="checkbox_hidden" onChange=generateQRCode()> hidden
+				</td>
+				<td>
+					<!--<button type="button" id="button_generate"  onClick=generateQRCode()>Generierung</button> -->
+				</td>
+			</tr>			
+		</table>
+		<button type="button" id="button_print" onClick="printNetwork()"> Print Sheet & Save into local storage</button>
+				
+		<h1>W-LAN</h1>
+		<hr><br>
+		<!--<input type="text" id="debug" disabled=true placeholder="generated Code for debugging">
+	-->
+
+	</main>
+
+
+	<!-- Beginn der Sektion, die gedruckt werden soll-->
+	<output>
+	<!-- This is where our QRCode will appear in. -->
+    <div id="qrcode"></div>
+		<table border=0>
+			<tr>
+				<td>SSID</td>
+				<td><input type="text" id="output_field_ssid" disabled=true ></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" id="output_field_password" disabled=true ></td>
+			</tr>		
+			<tr>
+				<td>Encryption</td>
+				<td><input type="text" id="output_field_encryption" disabled=true ></td>
+			</tr>		
+		</table>		
+	</output>
+    
+
+</body>
+</html>

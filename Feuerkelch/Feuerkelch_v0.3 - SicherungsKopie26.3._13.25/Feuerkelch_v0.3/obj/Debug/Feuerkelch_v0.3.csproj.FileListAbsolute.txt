@@ -1,0 +1,16 @@
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\ApplicationIcon.png
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\Background.png
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\Feuerkelch_v0.3.dll
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\Feuerkelch_v0.3.pdb
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\AppManifest.xaml
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\Feuerkelch_v0._3.xap
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\Microsoft.Phone.Controls.dll
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\Bin\Debug\Microsoft.Phone.Controls.xml
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\ResolveAssemblyReference.cache
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\App.g.i.cs
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\MainPage.g.i.cs
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\Feuerkelch_v0.3.g.resources
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\Feuerkelch_v0.3.dll
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\Feuerkelch_v0.3.pdb
+c:\users\erik\documents\visual studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\XapCacheFile.xml
+C:\Users\Erik\Documents\Visual Studio 2010\Projects\Feuerkelch_v0.3\Feuerkelch_v0.3\obj\Debug\PageManual.g.i.cs

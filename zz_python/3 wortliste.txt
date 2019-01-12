@@ -1,0 +1,7 @@
+# gegeben ist eine liste
+satz =["Es", "war", "kein", "Traum"]
+
+#for schleife über listenelemente
+for word in satz:
+	#über listenelement gehen
+	print word, len(word) 

@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# 2016-01-31 v1.0.7
+
+CACHE:
+/jquery.mobile/jquery.js
+/jquery.mobile/jquery.mobile.external-png-1.4.5.css
+/jquery.mobile/jquery.mobile.icons-1.4.5.css
+/jquery.mobile/jquery.mobile.inline-png-1.4.5.css
+/jquery.mobile/jquery.mobile.inline-svg-1.4.5.css
+/jquery.mobile/jquery.mobile.structure-1.4.5.css
+/jquery.mobile/jquery.mobile.theme-1.4.5.css
+/jquery.mobile/jquery.mobile-1.4.5.css
+/jquery.mobile/jquery.mobile-1.4.5.js
+/js/currencies.json.js
+/js/script.js
+/index.html
+http://192.168.178.25/aufgabe_8_mobile/api/data.json
+
+NETWORK:
+
+FALLBACK:

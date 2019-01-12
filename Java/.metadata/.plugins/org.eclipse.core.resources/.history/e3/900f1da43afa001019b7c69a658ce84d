@@ -1,0 +1,6 @@
+#MS Access
+driver=sun.jdbc.odbc.JdbcOdbcDriver
+url=jdbc\:odbc\:Driver\={Microsoft Access Driver
+()
+user=
+password=

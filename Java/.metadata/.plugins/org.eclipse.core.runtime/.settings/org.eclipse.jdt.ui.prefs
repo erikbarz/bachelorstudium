@@ -1,0 +1,22 @@
+#Wed Oct 19 12:11:02 CEST 2011
+content_assist_proposals_foreground=0,0,0
+spelling_locale_initialized=true
+content_assist_disabled_computers=org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000
+org.eclipse.jdt.ui.text.templates_migrated=true
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+tabWidthPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+fontPropagated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+proposalOrderMigrated=true
+content_assist_proposals_background=255,255,255
+org.eclipse.jdt.ui.formatterprofiles.version=11
+org.eclipse.jdt.internal.ui.navigator.layout=2
+content_assist_number_of_computers=21
+useQuickDiffPrefPage=true
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="bank.model.Clearable"><rhs name\="bank.model.CheckingAccount"/></lhs><lhs name\="bank.model.Account"><rhs name\="bank.model.CheckingAccount"/></lhs><lhs name\="exercises.Circle"><rhs name\="exercises.Circle"/></lhs><lhs name\="kapitel2.IteratorIF"><rhs name\="kapitel2.SimpleList$SimpleListIterator"/></lhs><lhs name\="kapitel2.ListIF"><rhs name\="kapitel2.SimpleList"/></lhs><lhs name\="kapitel2.SimpleList"><rhs name\="kapitel2.SimpleList"/></lhs><lhs name\="java.util.NavigableSet"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.util.SortedSet"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.util.Set"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.util.AbstractSet"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.util.AbstractCollection"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.util.TreeSet"><rhs name\="java.util.TreeSet"/></lhs><lhs name\="java.util.Random"><rhs name\="java.util.Random"/></lhs><lhs name\="kapitel3.BinaryTree$TreeNode"><rhs name\="kapitel3.BinaryTree$TreeNode"/></lhs><lhs name\="kapitel3.BinaryTree"><rhs name\="kapitel3.BinaryTree"/></lhs><lhs name\="kapitel5.QuickSort"><rhs name\="kapitel5.QuickSort"/></lhs><lhs name\="java.io.InputStream"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.FileInputStream"><rhs name\="java.io.FileInputStream"/></lhs></history>
+org.eclipse.jdt.ui.text.code_templates_migrated=true
