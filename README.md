@@ -19,7 +19,7 @@
 
 # Übersicht non-Public Inhalte
 #### JBoss Kurs: Chat Anwendung 
-        Technologien: JNDI, EJB, Hibernate, JDBC, JSP
+        Technologien: JNDI, EJB, Hibernate, JDBC, JSP, JSF
 #### Java Kurs Heide: Schiffe versenken in Versionen von mir und Marcel
         Technologien: Java, GUI: AWT / SWT / SWING, Serialisierung - speichern und laden 
         Patterns: Factory, MVC      
